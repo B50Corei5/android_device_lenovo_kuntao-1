@@ -131,6 +131,17 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     XiaomiDoze
 
+# Camera-face detection
+PRODUCT_PACKAGES += \
+    org.codeaurora.camera \
+    org.codeaurora.camera.xml
+
+PRODUCT_BOOT_JARS += \
+    org.codeaurora.camera
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.camera.facedetect=1
+
 # TextClassifier smart selection model files
 PRODUCT_PACKAGES += \
     textclassifier.smartselection.bundle1
